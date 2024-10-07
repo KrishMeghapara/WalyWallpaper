@@ -1,0 +1,35 @@
+/* Contact Page Styling with Full-Height Fix */
+.contact-page {
+    background: linear-gradient(135deg, #fcb045, #fd1d1d, #833ab4); /* Orange gradient theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the content fills the remaining height */
+    padding: 20px;
+    box-sizing: border-box;
+    height: 86.9vh; /* Full viewport height */
+  }
+  
+  .content-wrapper {
+    background-color: #fff3e0; /* Light orange content background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: slideUp 1s ease;
+    width: 90%; /* Expanded width */
+    max-width: 1200px; /* Max width for large screens */
+    height: 100%; /* Fill the remaining height */
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      width: 95%; /* Adjust for mobile screens */
+    }
+  }
+  

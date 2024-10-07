@@ -1,0 +1,30 @@
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #008cba;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #005f5f;
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 1.8rem;
+    transition: transform 0.5s ease;
+  }
+  
+  .link:hover .icon {
+    transform: rotate(360deg);
+  }
+  

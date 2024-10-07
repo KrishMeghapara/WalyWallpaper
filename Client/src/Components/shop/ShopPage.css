@@ -1,0 +1,202 @@
+/* Shop page container */
+.shop-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e4e8); /* Original theme */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Grid styling for three images per row */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three images per row */
+  gap: 30px; /* Space between images */
+  width: 100%;
+  max-width: 1200px; /* Constrain width */
+  padding: 20px;
+}
+
+/* Image card */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* White background for cards */
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px; /* Adjusted height */
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Card overlay for free badge */
+.card-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff7650; /* Coral color for visibility */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Open modal button styling */
+.open-popup-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: #ff4500; /* Orange Red */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.open-popup-btn:hover {
+  background-color: #c0392b; /* Darker orange-red on hover */
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side of the modal */
+.modal-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Right side of the modal */
+.modal-right {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ff4500; /* Orange Red for headings */
+}
+
+/* Download Now Button */
+.download-now-btn {
+  display: inline-block;
+  background-color: #ff7f50; /* Coral color */
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Added margin for spacing */
+}
+
+.download-now-btn:hover {
+  background-color: #e74c3c; /* Darker coral on hover */
+}
+
+/* Close modal button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ff4500; /* Orange Red for close button */
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #c0392b; /* Darker orange-red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+  }
+
+  .modal-right {
+    padding: 15px;
+  }
+
+  .modal-left {
+    padding: 10px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 images on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px; /* Smaller font size on mobile */
+  }
+
+  .download-now-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .open-popup-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr; /* 1 image on very small screens */
+  }
+}
