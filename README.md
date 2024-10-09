@@ -1,10 +1,10 @@
-# MERN Stack WallPaper Store (WalyWallpaper)
+# WalyWallpaper - MERN Stack Wallpaper Store
 
-A simple, Online Shopping Store (like unsplash) built using the MERN (MongoDB, Express.js, React, Node.js) stack. This allows users to download img ...
+WalyWallpaper is a simple yet elegant online wallpaper store, similar to Unsplash, built using the MERN Stack (MongoDB, Express.js, React, Node.js). It allows users to browse and download high-quality wallpapers. The project is a part of my Semester 3 project at Darshan University.
 
 ![Home Page](HomePage.png)
 
-## Features
+🎯 Features
 
 - User have amazing offers Right now!
 
@@ -22,14 +22,14 @@ A simple, Online Shopping Store (like unsplash) built using the MERN (MongoDB, E
 
 ![About Us!](Contact.png)
 
-## Technology Stack
+💻 Technology Stack
 
 - **Frontend**: React, bootstrap , ChatGpt
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 
 
-## Installation
+🚀 Installation
 
 1. Clone the repository:
 2. Install dependencies for backend and frontend  (using npm install):
