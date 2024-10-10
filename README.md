@@ -10,7 +10,7 @@ WalyWallpaper is a simple yet elegant online wallpaper store, similar to Unsplas
 
 ![Offer Right Now](OfferRightNow.png)
 
-- Shop items as you want
+- Shop items as you want!
  
 ![Shop items as you want](ShopHere.png)
 
