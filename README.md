@@ -1,152 +1,197 @@
-# 🎉 **WalyWallpaper** - A MERN Stack Wallpaper Store  
+# WalyWallpaper 🖼️
 
-WalyWallpaper is your one-stop destination for **high-quality wallpapers**, built with the power of the **MERN Stack**. Inspired by platforms like **Unsplash**, this project delivers a seamless user experience to browse, download, and shop for wallpapers.  
-> 📚 **Project by:** **Krish Meghapara** as part of Semester 3 WT Project at **Darshan University**.  
+A modern wallpaper discovery and download platform built with React and Node.js, powered by the Pexels API.
 
-![Home Page](HomePage.png)  
+## Features ✨
 
----
+- **Beautiful UI**: Modern, responsive design with dark theme
+- **Search Functionality**: Search wallpapers by keywords
+- **Category Browsing**: Browse wallpapers by popular categories
+- **High-Quality Images**: Get high-resolution wallpapers from Pexels
+- **Download Tracking**: Track download statistics
+- **Mobile Responsive**: Works perfectly on all devices
+- **Fast Loading**: Optimized with caching and lazy loading
 
-## 🌟 **Key Features**  
+## Tech Stack 🛠️
 
-### 🎁 **Exciting Offers Just for You!**  
-Stay updated with **amazing offers** tailored for all wallpaper enthusiasts!  
+### Frontend
+- React 18
+- React Router DOM
+- Tailwind CSS
+- Axios for API calls
 
-![Offer Right Now](OfferRightNow.png)  
+### Backend
+- Node.js
+- Express.js
+- Pexels API
+- Rate limiting
+- CORS enabled
+- Helmet for security
 
-### 🛒 **Browse and Shop Effortlessly**  
-Navigate through beautifully categorized wallpapers and choose your favorites with ease.  
+## Prerequisites 📋
 
-![Shop items as you want](ShopHere.png)  
+- Node.js (v14 or higher)
+- npm or yarn
+- Pexels API key (free)
 
-### 💡 **Learn About Us**  
-Discover the journey, inspiration, and technology behind **WalyWallpaper**.  
+## Setup Instructions 🚀
 
-![About Us!](AboutUs.png)  
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd WalyWallpaper
+```
 
-### 📩 **Stay Connected**  
-Have questions or feedback? Get in touch via the Contact page!  
+### 2. Backend Setup
 
-![Contact Us](Contact.png)  
+1. Navigate to the server directory:
+```bash
+cd Server
+```
 
----
+2. Install dependencies:
+```bash
+npm install
+```
 
-## 💻 **Technology Stack**  
+3. Create a `.env` file in the Server directory:
+```env
+PEXELS_API_KEY=your_pexels_api_key_here
+PORT=3001
+NODE_ENV=development
+```
 
-WalyWallpaper is powered by:  
-- **Frontend:** React, Bootstrap, and ChatGPT-assisted designs  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
+4. Get your free Pexels API key:
+   - Visit [https://www.pexels.com/api/](https://www.pexels.com/api/)
+   - Sign up for a free account
+   - Copy your API key
+   - Paste it in the `.env` file
 
----
+5. Start the server:
+```bash
+npm run dev
+```
 
-## 🚀 **How to Set Up WalyWallpaper Locally**  
+The server will start on `http://localhost:3001`
 
-Follow these steps to run the project on your local system:  
+### 3. Frontend Setup
 
-1. **Clone the Repository**  
-   ```bash  
-   git clone https://github.com/your-username/WalyWallpaper.git  
-   ```  
+1. Open a new terminal and navigate to the client directory:
+```bash
+cd client
+```
 
-2. **Navigate to the Project Folder**  
-   ```bash  
-   cd WalyWallpaper  
-   ```  
+2. Install dependencies:
+```bash
+npm install
+```
 
-3. **Install Dependencies**  
-   - For the backend:  
-     ```bash  
-     cd backend  
-     npm install  
-     ```  
-   - For the frontend:  
-     ```bash  
-     cd frontend  
-     npm install  
-     ```  
+3. Start the development server:
+```bash
+npm start
+```
 
-4. **Set Up Environment Variables**  
-   - Create a `.env` file in the `backend` directory.  
-   - Add the following variables:  
-     ```plaintext  
-     MONGO_URI=your_mongodb_connection_string  
-     PORT=your_desired_backend_port  
-     ```  
+The frontend will start on `http://localhost:3000`
 
-5. **Run the Backend Server**  
-   ```bash  
-   cd backend  
-   npm start  
-   ```  
+## API Endpoints 📡
 
-6. **Run the Frontend**  
-   Open a new terminal and run:  
-   ```bash  
-   cd frontend  
-   npm start  
-   ```  
+- `GET /api/categories` - Get all available categories
+- `GET /api/wallpapers?query=<search_term>` - Search wallpapers
+- `GET /api/wallpapers/category/:id` - Get wallpapers by category
+- `POST /api/track-download` - Track wallpaper downloads
+- `GET /health` - Health check endpoint
+- `GET /api` - API documentation
 
-7. **Access the Application**  
-   Visit the app in your browser:  
-   ```  
-   http://localhost:3000  
-   ```  
+## Project Structure 📁
 
----
+```
+WalyWallpaper/
+├── client/                 # Frontend React app
+│   ├── public/
+│   ├── src/
+│   │   ├── components/     # React components
+│   │   ├── Pages/         # Page components
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── tailwind.config.js
+├── Server/                 # Backend Node.js app
+│   ├── index.js           # Main server file
+│   ├── package.json
+│   └── .env              # Environment variables
+└── README.md
+```
 
-## ✨ **Why Choose WalyWallpaper?**  
+## Available Scripts 📜
 
-- **🌈 Visually Stunning**: A beautifully designed, clean, and responsive interface.  
-- **🚀 High Performance**: Smooth and fast navigation across all features.  
-- **💡 AI-Assisted Development**: Built using cutting-edge technologies with the help of ChatGPT.  
+### Backend (Server directory)
+- `npm start` - Start production server
+- `npm run dev` - Start development server with nodemon
 
----
+### Frontend (Client directory)
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
 
-## 👨‍💻 **About Me**  
+## Environment Variables 🔧
 
-Hi there! I’m **Krish Meghapara**, a passionate **MERN Stack Developer** and a **4th Semester B.Tech CSE Student** at **Darshan University**.  
-I enjoy creating **interactive web applications** and leveraging **AI tools** like ChatGPT to bring innovative ideas to life.  
+### Backend (.env file)
+```env
+PEXELS_API_KEY=your_pexels_api_key_here
+PORT=3001
+NODE_ENV=development
+```
 
-**Let’s Connect!**  
-- 📧 **Email:** krishmeghapara@gmail.com  
-- 🔗 **GitHub:** [github.com/krishmeghapara](https://github.com/krishmeghapara)  
-- 💼 **LinkedIn:** [linkedin.com/in/krish-meghapara-49571b2a7/](https://linkedin.com/in/krish-meghapara-49571b2a7/)  
+## Features in Detail 🎯
 
----
+### Homepage
+- Hero section with search functionality
+- Popular categories display
+- How-to-use guide
 
-## 🤝 **How to Contribute**  
+### Search Page
+- Real-time search results
+- Loading states
+- Error handling
+- Responsive grid layout
 
-We welcome contributions to enhance WalyWallpaper further.  
+### Category Page
+- Category-specific wallpapers
+- Breadcrumb navigation
+- Loading and error states
 
-1. **Fork the Repository**  
-   ```bash  
-   git fork https://github.com/your-username/WalyWallpaper.git  
-   ```  
+### Image Cards
+- High-quality image display
+- Download functionality
+- Photographer attribution
+- Hover effects
 
-2. **Create a New Branch**  
-   ```bash  
-   git checkout -b feature/YourFeatureName  
-   ```  
+## Contributing 🤝
 
-3. **Make Your Changes**  
-   Implement your feature or fix bugs.  
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-4. **Commit and Push**  
-   ```bash  
-   git commit -m "Add YourFeatureName"  
-   git push origin feature/YourFeatureName  
-   ```  
+## License 📄
 
-5. **Open a Pull Request**  
-   Submit your changes for review.  
+This project is licensed under the MIT License.
 
----
+## Author 👨‍💻
 
-## 📜 **License**  
+**Krish Meghapara**
 
-This project is licensed under the **MIT License**.  
+## Support 💬
 
----
+If you encounter any issues or have questions:
+1. Check the API documentation at `http://localhost:3001/api`
+2. Verify your Pexels API key is correct
+3. Check the server logs for errors
+4. Open an issue on GitHub
 
-**Made with ❤️ by Krish Meghapara | WalyWallpaper**  
+## Acknowledgments 🙏
+
+- [Pexels](https://www.pexels.com/) for providing the amazing wallpaper API
+- [Tailwind CSS](https://tailwindcss.com/) for the beautiful styling framework
+- [React](https://reactjs.org/) for the amazing frontend framework 
