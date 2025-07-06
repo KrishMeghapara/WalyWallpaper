@@ -1,12 +1,32 @@
 {
-  "dependencies": {
-    "axios": "^1.7.7",
-    "cors": "^2.8.5",
-    "express": "^4.21.0",
-    "mongoose": "^8.6.3",
-    "nodemon": "^3.1.7"
-  },
+  "name": "walywallpaper-server",
+  "version": "1.0.0",
+  "description": "Backend server for WalyWallpaper - A wallpaper discovery and download platform",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js"
-  }
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^6.11.2",
+    "helmet": "^7.2.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "wallpaper",
+    "api",
+    "pexels",
+    "express",
+    "nodejs"
+  ],
+  "author": "Krish Meghapara",
+  "license": "MIT"
 }
